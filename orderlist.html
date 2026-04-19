@@ -1,0 +1,38 @@
+<h3 class="mb-4 pl-4 fw-bold">Orderlist</h3>
+
+<div class="card p-3 mb-4 bg-light border-0">
+    <div class="row g-2 align-items-center">
+        <div class="col-sm-3">
+            <select class="form-select form-select-sm" id="order-filter-status" onchange="renderOrderlist()">
+                <option value="all" selected>전체 주문상태</option>
+                <option value="배송중">배송중</option>
+                <option value="배송완료">배송완료</option>
+                <option value="취소/반품">취소/반품</option>
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <select class="form-select form-select-sm" id="order-filter-period" onchange="renderOrderlist()">
+                <option value="all" selected>전체 기간</option>
+                <option value="1">1개월</option>
+                <option value="3">3개월</option>
+                <option value="6">6개월</option>
+                <option value="12">1년</option>
+            </select>
+        </div>
+        <div class="col-sm-6 text-end">
+            <span class="badge bg-secondary p-2" id="order-count-badge">0건</span>
+        </div>
+    </div>
+</div>
+
+<div class="list-group-item py-2 bg-light border rounded mb-2">
+    <div class="row align-items-center w-100 m-0 text-secondary small fw-bold text-center">
+        <div class="col-2">주문일자/번호</div>
+        <div class="col-5">상품정보</div>
+        <div class="col-2">상태</div>
+        <div class="col-3">관리</div>
+    </div>
+</div>
+
+<ul class="list-group list-group-flush" id="orderlist-container">
+    </ul>

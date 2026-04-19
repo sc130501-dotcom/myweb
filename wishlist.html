@@ -1,0 +1,61 @@
+<h3 class="mb-4 pl-4 fw-bold">Wishlist</h3>
+
+<div class="card p-3 mb-4 bg-light border-0">
+    <div class="row g-2 align-items-center">
+        <div class="col-sm-3">
+            <select class="form-select form-select-sm" id="wish-filter-gen" onchange="renderWishlist()">
+                <option value="all" selected hidden>세대를 선택하세요</option>
+                <option value="all">모든 세대</option>
+                <option value=1>1세대</option>
+                <option value=2>2세대</option>
+                <option value=3>3세대</option>
+                <option value=4>4세대</option>
+                <option value=5>5세대</option>
+                <option value=6>6세대</option>
+                <option value=7>7세대</option>
+                <option value=8>8세대</option>
+                <option value=9>9세대</option>
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <select class="form-select form-select-sm" id="wish-filter-type" onchange="renderWishlist()">
+                <option value="all" selected hidden>타입을 선택하세요</option>
+                <option value="all">모든 타입</option>
+                <option value="Normal">노말</option>
+                <option value="Fire">불꽃</option>
+                <option value="Water">물</option>
+                <option value="Grass">풀</option>
+                <option value="Electric">전기</option>
+                <option value="Ice">얼음</option>
+                <option value="Fighting">격투</option>
+                <option value="Poison">독</option>
+                <option value="Ground">땅</option>
+                <option value="Flying">비행</option>
+                <option value="Psychic">에스퍼</option>
+                <option value="Bug">벌레</option>
+                <option value="Rock">바위</option>
+                <option value="Ghost">고스트</option>
+                <option value="Dragon">드래곤</option>
+                <option value="Steel">강철</option>
+                <option value="Fairy">페어리</option>
+            </select>
+        </div>
+        <div class="col-sm-2 ms-auto">
+            <select class="form-select form-select-sm" id="wish-sort" onchange="renderWishlist()">
+                <option value="date_desc" selected hidden>정렬</option>
+                <option value="date_desc">최신순</option>
+                <option value="id_asc">상품코드순</option>
+                <option value="name_asc">상품명순</option>
+                <option value="price_asc">낮은가격순</option>
+                <option value="price_desc">높은가격순</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<ul class="list-group list-group-flush" id="wishlist-container">
+</ul>
+
+<div class="d-flex justify-content-between mt-3">
+    <button class="btn btn-outline-secondary btn-sm" id="wish-delete-selected">선택 삭제</button>
+</div>

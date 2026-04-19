@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>포켓몬스터 굿즈 쇼핑몰 마이페이지</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <div id="header"></div>
+    <div class="container flex-grow-1" style="margin-top: 80px; margin-bottom: 100px;">
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="mypage-sidebar sticky-top" style="top: 100px;">
+                    <div class="text-center mb-4 p-3 border rounded bg-light">
+                        <img src="./images/monsterball.webp" alt="profile" style="width: 60px; margin-bottom: 15px;">
+                        <h5 id="mypage-username" style="font-weight: bold;">뿌잉뿌잉 님</h5>
+                        <p class="text-secondary small mb-0">Lv.3</p>
+                    </div>
+                    <div class="list-group" id="my-list-group">
+                        <button class="list-group-item list-group-item-action active"
+                            onclick="showSection('dashboard', this)">대시보드</button>
+                        <button class="list-group-item list-group-item-action"
+                            onclick="showSection('orderlist', this)">주문내역</button>
+                        <button class="list-group-item list-group-item-action"
+                            onclick="showSection('wishlist', this)">위시리스트</button>
+                        <button class="list-group-item list-group-item-action"
+                            onclick="showSection('coupon', this)">적립금/쿠폰</button>
+                        <button class="list-group-item list-group-item-action"
+                            onclick="showSection('profile', this)">회원정보 수정</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div id="dashboard-section" class="mypage-section active">
+                    <h4 class="mb-4 fw-bold">Menu</h4>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="point-box1 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0">보유 적립금</h5>
+                                    <small>주문서에서 적용 가능</small>
+                                </div>
+                                <strong style="font-size: 1.5rem;">2,500 P</strong>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="point-box2 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-0">사용 가능 쿠폰</h5>
+                                    <small>주문서에서 적용 가능</small>
+                                </div>
+                                <strong style="font-size: 1.5rem;">3 장</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="mb-3 fw-bold">나의 주문 현황 <small class="fs-6 text-secondary fw-normal">(최근 3개월)</small></h5>
+                    <div class="row g-2 mb-5">
+                        <div class="col">
+                            <div class="status-card">
+                                <div class="text-secondary small">입금전</div>
+                                <div class="status-count">0</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="status-card">
+                                <div class="text-secondary small">배송준비중</div>
+                                <div class="status-count">1</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="status-card">
+                                <div class="text-secondary small">배송중</div>
+                                <div class="status-count">2</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="status-card">
+                                <div class="text-secondary small">배송완료</div>
+                                <div class="status-count">5</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="status-card">
+                                <div class="text-secondary small">취소/반품</div>
+                                <div class="status-count">0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="mb-3 fw-bold">최근 주문 내역</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover text-center align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>주문일자/번호</th>
+                                    <th>상품정보</th>
+                                    <th>상태</th>
+                                    <th>확인</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2026.07.10<br><small class="text-secondary">ORD-0132</small></td>
+                                    <td class="text-start">Munchlax</td>
+                                    <td><span class="badge bg-primary">배송중</span></td>
+                                    <td><button class="btn btn-sm btn-outline-secondary">배송조회</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2026.05.30<br><small class="text-secondary">ORD-0082</small></td>
+                                    <td class="text-start">Bulbasaur</td>
+                                    <td><span class="badge bg-secondary">배송완료</span></td>
+                                    <td><button class="btn btn-sm btn-outline-secondary">구매확정</button>
+                                        <button class="btn btn-sm btn-outline-secondary">교환/반품</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2026.01.07<br><small class="text-secondary">ORD-0001</small></td>
+                                    <td class="text-start">Snorlax</td>
+                                    <td><span class="badge bg-secondary">배송완료</span></td>
+                                    <td><button class="btn btn-sm btn-outline-secondary">구매확정</button>
+                                        <button class="btn btn-sm btn-outline-secondary">교환/반품</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="orderlist-section" class="mypage-section"></div>
+                <div id="wishlist-section" class="mypage-section"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="./javascript/headerfooter.js"></script>
+    <script src="./javascript/mypage.js"></script>
+    <script src="./javascript/cart.js"></script>
+    <script src="./javascript/orderlist.js"></script>
+    <script src="./javascript/wishlist.js"></script>
+    <script src="./javascript/rightmenubar.js"></script>
+
+    <script src="./javascript/login.js"></script>
+    <script src="./javascript/signup.js"></script>
+    <script src="./javascript/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

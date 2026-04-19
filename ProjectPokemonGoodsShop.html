@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>포켓몬스터 굿즈 쇼핑몰</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <div id="wrapper">
+
+    <!-- 헤더: 상단 네비바 -->
+    <div id="header"></div>
+
+    <!-- 슬라이드 -->
+    <div id="carousel"></div>
+
+    <!-- 한 줄 -->
+    <div class="banner-section text-center">
+      <div class="container">
+        <h1>파트너와 함께 즐거운 여정을 떠나보세요.</h1>
+      </div>
+    </div>
+
+    <!-- 검색 -->
+    <nav class="navbar bg-body-tertiary" id="search-section">
+      <div class="container-fluid justify-content-center">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" list="datalistOptions" id="exampleDataList" type="search"
+            placeholder="검색어를 입력하세요." aria-label="검색">
+          <datalist id="datalistOptions"></datalist>
+          <button class="btn btn-outline-success" type="submit">search</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- 상품 레이아웃 -->
+    <div class="container text-center" style="padding: 20px;">
+      <div class="d-flex justify-content-end mb-3 container">
+        <select class="form-select form-select-sm" id="product-sort" onchange="sortProducts()" style="width: 150px;">
+          <option value="id_asc" selected>상품코드순</option>
+          <option value="name_asc">상품명순</option>
+          <option value="price_asc">낮은가격순</option>
+          <option value="price_desc">높은가격순</option>
+        </select>
+      </div>
+      <div class="row g-4" id="productlist">
+        <div class="d-flex justify-content-end mb-3 container">
+        </div>
+      </div>
+    </div>
+
+    <!-- 페이지네이션 -->
+    <nav aria-label="페이지네이션">
+      <ul class="pagination justify-content-center">
+        <li class="allprev-button">
+          <a class="page-link">◀</a>
+        </li>
+        <li class="prev-button">
+          <a class="page-link">◁</a>
+        </li>
+        <li class="number-button-wrapper">
+          <span id="number-button-wrapper" class="number-button-wrapper">
+            <a class="page-link" href="#">1</a></span>
+        </li>
+        <li class="next-button">
+          <a class="page-link" href="#">▷</a>
+        </li>
+        <li class="allnext-button">
+          <a class="page-link" href="#">▶</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <!-- 회사 설명 -->
+    <div id="footer"></div>
+
+
+
+    <script src="./javascript/layout.js"></script>
+    <script src="./javascript/pagination.js"></script>
+    <script src="./javascript/headerfooter.js"></script>
+    <script src="./javascript/carousel.js"></script>
+    <script src="./javascript/cart.js"></script>
+    <script src="./javascript/rightmenubar.js"></script>
+
+    <script src="./javascript/login.js"></script>
+    <script src="./javascript/signup.js"></script>
+    <script src="./javascript/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+      </script>
+
+  </div>
+</body>
+
+</html>

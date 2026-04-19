@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>포켓몬스터 굿즈 쇼핑몰 상품 상세 페이지</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- 헤더: 상단 네비바 -->
+  <div id="header"></div>
+
+  <!-- 썸네일과 주정보 -->
+  <div class="container overflow-hidden" style="margin-top: 50px;">
+    <div class="row align-items-center">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-5">
+        <img id="productimgthumbnail" src="" class="productimgthumbnail" alt="썸네일">
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-5 border" style="padding: 20px; border-radius: 20px;">
+        <div class="row align-items-center mb-4">
+          <h1 id="productname" class="col-sm-9 fw-bold m-0">상품명</h1>
+          <div id="producttypeicon" class="col-sm-3 d-flex justify-content-end align-items-center gap-1"></div>
+        </div>
+        <table class="table table-borderless product-info-table mb-4">
+          <tr>
+            <th>상품코드</th>
+            <td id="productid">상품코드</td>
+          </tr>
+          <tr>
+            <th>상품가격</th>
+            <td id="productprice" class="fs-4">상품가격</td>
+          </tr>
+          <tr class="shipping-row">
+            <th>배송비</th>
+            <td id="shippingfee">배송비</td>
+          </tr>
+        </table>
+        <hr class="my-4">
+        <div class="mb-3 row align-items-center">
+          <div class="col-4 text-secondary">수량</div>
+          <div class="col-8 text-end">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn detail-qty-btn" onclick="changeamount(-1);">-</button>
+              <input type="number" id="amountInput" class="form-control text-center d-inline-block" value="1"
+                style="width: 60px; border-radius: 0;">
+              <button type="button" class="btn detail-qty-btn" onclick="changeamount(1);">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4 row align-items-center">
+          <div class="col-4 text-secondary fw-bold">총 가격</div>
+          <div class="col-8 text-end">
+            <h3 id="totalprice" class="text-danger fw-bold m-0">¥0</h3>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end gap-2">
+          <button type="button" class="wishlist-btn-detail" onclick="Wishlist()">
+            <img src="./images/hearticon.png" alt="위시리스트" class="wishlist-icon" id="wish-icon">
+          </button>
+          <button type="button" class="btn btn-danger cart py-2 px-4">장바구니</button>
+          <button type="button" class="btn btn-primary buynow py-2 px-4">바로구매</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 한 줄 -->
+  <div class="banner-section text-center">
+    <div class="container">
+      <h1>제품 상세 설명</h1>
+    </div>
+  </div>
+
+  <!-- 상세 이미지 -->
+  <div class="container text-center">
+    <div style="padding: 50px;">
+      <div class="detailcontainer">
+        <img id="productimgdetail" src="" class="productimgdetail" alt="상세 이미지">
+      </div>
+      <h3>△ 썸네일이랑 이미지가 똑같지만 아무튼 상세 이미지</h3>
+    </div>
+  </div>
+
+  <!-- 회사 설명 -->
+  <div id="footer"></div>
+
+
+  <script src="./javascript/selectedProduct.js"></script>
+  <script src="./javascript/cart.js"></script>
+  <script src="./javascript/headerfooter.js"></script>
+  <script src="./javascript/rightmenubar.js"></script>
+
+  <script src="./javascript/login.js"></script>
+  <script src="./javascript/signup.js"></script>
+  <script src="./javascript/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
